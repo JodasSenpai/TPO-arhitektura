@@ -20,11 +20,11 @@ Obnašanje 27 funkcionalnosti sistema DogWalkers je prikazanih s pomočjo diagra
 
 ### 1.1 Logični pogled
 Na sliki je prikazan logični model arhitekture naše aplikacije. Njene glavne funkcionalnosti so razdeljene v sedmih komponentah: Avtentikacija, Oglasi, Profil, Administratorske pravice, Pogovor, Razširitve in Zunanji vmesniki. Vsaka od komponent obsega njene glavne funkcionalnosti, običajni prehodi med njimi pa so označeni s puščicami. Tako se naprimer uporabnik prijavi v aplikaciji, si ogleda oglase, stopi v pogovor s potencialnim sogovornikom, tam pa ima možnosti dostopa do različnih razširitev. Prav tako lahko uporabnik iz svoje prve strani dostopa do svojega profila, ga uredi in shrani spremembe. Administrator pa ima set svojih funkcionalnosti, ki so vezane na pregld uporabnikov in upravljanje z njihovimi profili. Do zunanjih vmesnikov sistem dostopa ob proženju specifčnih funkcionalnosti kot so filtriranje oglasov po oddaljenjosti in prijava neprimerne vsebine.
-![arhitektura logicni pogled](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/arhitekturaLogicni.png)
+![arhitektura logicni pogled](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/arhitekturaLogicni.png)
 
 ### 1.2 Razvojni pogled
 Na sliki je prikazan razvojni pogled arhitekture naše aplikacije. Aplikacija uporablja arhitekturni vzorec model-pogled-krmilnik (MVC). Brskalnik neposredno komunicira z pogledom (view). S klikanjem gumbov in drugih interakcijskih elementov se začnejo izvajati funkcije na krmilniku (controller) specifičnega pogleda. Ta nato komunicira z modelom, ki mu vrne podatke oz. naredi neposredne posege na podatkovni bazi. Krmilnik pa nato posreduje podatke nazaj na pogled. Prav tako pa je krmilnik zadolžen za komuniciranje z zunanjimi vmesniki. 
-![arhitektura razvojni pogled](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/arhitekturaRazvojni.png)
+![arhitektura razvojni pogled](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/arhitekturaRazvojni.png)
 
 ## 2. Načrt strukture
 
@@ -32,59 +32,59 @@ Na sliki je prikazan razvojni pogled arhitekture naše aplikacije. Aplikacija up
 
 Na spodnji sliki je predstavljen celostni razredni diagram. Za večjo sliko priporočamo da jo odprete v novem zavihku. Razredni diagram vsebuje vse razrede zaslonskih mask (oznaka ZM), zaslonskih vmesnikov (oznaka ZV), kontrolerjev (oznaka K) in entitet. V oranžnem kvadratu je označen razred, kjer je uporabljen načrtovalski vzorec Singleton. V vijola kvadratih pa je označeno kateri razredi bodo uporabljali Factory Method. tu deluje razred Registriran uporabnik kot superclass, razredi "Lastnik psa", "Sprehajalec" in "Podjetje" pa so podrazredi razreda "Registriran uporabnik".
 
-![Celotni razredni diagram](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/celotni_razredni_diagram.png)
+![Celotni razredni diagram](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/celotni_razredni_diagram.png)
 
 ### 2.2 VOPC diagrami posameznih funkcionalnosti
 ### 2.2.1 Registracija
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/registracijaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/registracijaVOPC.png)
 ### 2.2.2 Prijava
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/prijavaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/prijavaVOPC.png)
 ### 2.2.3 Prikaz seznama lastnikov psov
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/prikazSeznamaLastnikovPsovVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/prikazSeznamaLastnikovPsovVOPC.png)
 ### 2.2.4 Prikaz seznama sprehajalcev
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/prikazSeznamaSprehajalcevVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/prikazSeznamaSprehajalcevVOPC.png)
 ### 2.2.5 Prikaz seznama podjetij
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/prikazSeznamaPodjetijVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/prikazSeznamaPodjetijVOPC.png)
 ### 2.2.6 Administratorjev pregled profila
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/admnistratorjevPregledProfilaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/admnistratorjevPregledProfilaVOPC.png)
 ### 2.2.7 Brisanje oglasa
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/brisanjeOglasaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/brisanjeOglasaVOPC.png)
 ### 2.2.8 Urejanje profila
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/urejanjeProfilaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/urejanjeProfilaVOPC.png)
 ### 2.2.9 Brisanje profila
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/brisanjeProfilaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/brisanjeProfilaVOPC.png)
 ### 2.2.10 Pregled seznama oglasov in Pregled izbranega oglasa
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/pregledSeznamaOglasovVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/pregledSeznamaOglasovVOPC.png)
 ### 2.2.11 Zavrni ponudbo
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/zavrniPonudboVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/zavrniPonudboVOPC.png)
 ### 2.2.12 Sprejmi ponudbo
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/sprejmiPonudboVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/sprejmiPonudboVOPC.png)
 ### 2.2.13 Prijava neprimerne vsebine
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/prijavaNeprimerneVsebineVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/prijavaNeprimerneVsebineVOPC.png)
 ### 2.2.14 Pregled profila sogovornika
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/pregledProfilaSogovornika.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/pregledProfilaSogovornika.png)
 ### 2.2.15 Filtriranje seznama oglasov po oceni
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/filtriranjeOcenaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/filtriranjeOcenaVOPC.png)
 ### 2.2.16 Filtriranje seznama oglasov po oddaljenosti
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/filtriranjeOddaljenostVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/filtriranjeOddaljenostVOPC.png)
 ### 2.2.17 Prikaz seznama pogovorov
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/prikazSeznamaPogovorovVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/prikazSeznamaPogovorovVOPC.png)
 ### 2.2.18 Pogovor med lastnikom psa in sprehajalcem
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/pogovorVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/pogovorVOPC.png)
 ### 2.2.19 Podajanje ocene
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/podajanjeOceneVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/podajanjeOceneVOPC.png)
 ### 2.2.20 Ustvarjanje novega oglasa
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/ustvarjanjeNovegaOglasaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/ustvarjanjeNovegaOglasaVOPC.png)
 ### 2.2.21 Pregled svojih aktivnih oglasov
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/pregledAktivnihOglasovVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/pregledAktivnihOglasovVOPC.png)
 ### 2.2.22 Urejanje aktivnega oglasa
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/urejanjeOglasaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/urejanjeOglasaVOPC.png)
 ### 2.2.23 Brisanje aktivnega oglasa
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/brisanjeAktivnegaOglasaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/brisanjeAktivnegaOglasaVOPC.png)
 ### 2.2.24 Generiranje varnostne šifre
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/generiranjeSifreVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/generiranjeSifreVOPC.png)
 ### 2.2.25 Izdelava statistike o uporabnikih
-![VOPC](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/vopc/statistikaVOPC.png)
+![VOPC](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/vopc/statistikaVOPC.png)
 
 
 ### 2.3 Opis razredov
@@ -1826,28 +1826,28 @@ Na spodnji sliki je predstavljen celostni razredni diagram. Za večjo sliko prip
 
 #### 3.1.1 Registracija - osnovni tok
 Diagram zaporedja funkcionalsti "Registracija". Glede na vlogo, ki jo uporabnik izbere se razlikuje stran, na katero ga sistem po uspešni registraciji preusmeri.
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Registracija-osnovni-tok.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Registracija-osnovni-tok.png)
 
 ### 3.2 Prijava
 
 #### 3.2.1 Prijava - osnovni tok 1
 Diagram zaporedja funkcionalnosti "Prijava". Glede na vlogo, pod katero je uporabnik prijavljen se razlikuje stran, na katero ga sistem po uspešni prijavi preusmeri.
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prijava-osnovni-tok-1.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prijava-osnovni-tok-1.png)
 
 #### 3.2.2 Prijava - osnovni tok 2
 Diagram zaporedja funkcionalnosti "Prijava" ko je uporabnik tipa Administrator.
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prijava-osnovni-tok-2.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prijava-osnovni-tok-2.png)
 
 #### 3.2.3 Prijava - izjemni tok 1, 2
 Diagram prikazuje možne izjemne toke, ki se zgodijo ob prijavi.
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prijava-izjemni-tok-1-2.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prijava-izjemni-tok-1-2.png)
 
 ### 3.3 Prikaz seznama lastnikov psov
 
 #### 3.3.1 Prikaz seznama lastnikov psov - osnovni tok
 Diagram zaporedja funkcionalnosti "Prikaz seznama lastnikov psov". Prikazani so še kliki na druge gumbe, ki se potem nadaljujejo v drugih diagramih zaporedja.
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prikaz-seznama-lastnikov-psov-osnovni-tok.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prikaz-seznama-lastnikov-psov-osnovni-tok.png)
 
 ### 3.4 Prikaz seznama sprehajalcev
 
@@ -1855,7 +1855,7 @@ Diagram zaporedja funkcionalnosti "Prikaz seznama lastnikov psov". Prikazani so 
 Diagram zaporedja funkcionalnosti "Prikaz seznama sprehajalcev". Prikazani so še kliki na druge gumbe, ki se potem nadaljujejo v drugih diagramih zaporedja.
 
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prikaz-seznama-sprehajalcev-osnovni-tok.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prikaz-seznama-sprehajalcev-osnovni-tok.png)
 
 ### 3.5 Prikaz seznama podjetij
 
@@ -1863,21 +1863,21 @@ Diagram zaporedja funkcionalnosti "Prikaz seznama sprehajalcev". Prikazani so š
 Diagram zaporedja funkcionalnosti "Prikaz seznama podjetij". Prikazani so še kliki na druge gumbe, ki se potem nadaljujejo v drugih diagramih zaporedja.
 
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prikaz-seznama-podjetij-osnovni-tok.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prikaz-seznama-podjetij-osnovni-tok.png)
 
 ### 3.6 Administratorjev pregled profila
 Diagrami zaporedja funkcionalnosti "Administratorjev pregled profila". Osnovni toki se razlikujejo v začetni lokaciji administratorja.
 #### 3.6.1 Administratorjev pregled profila - osnovni tok 1
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Administratorjev-pregled-profila-osnovni-tok-1.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Administratorjev-pregled-profila-osnovni-tok-1.png)
 
 #### 3.6.2 Administratorjev pregled profila - osnovni tok 2
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Administratorjev-pregled-profila-osnovni-tok-2.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Administratorjev-pregled-profila-osnovni-tok-2.png)
 
 #### 3.6.3 Administratorjev pregled profila - osnovni tok 3
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Administratorjev-pregled-profila-osnovni-tok-3.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Administratorjev-pregled-profila-osnovni-tok-3.png)
 
 ### 3.7 Brisanje oglasa
 
@@ -1885,18 +1885,18 @@ Diagrami zaporedja funkcionalnosti "Administratorjev pregled profila". Osnovni t
 Diagram  zaporedja funkcionalnosti "Brisanje oglasa" na katerem je označen še izjemni tok dogodka. Ta se zgodi če je oglas bil že izbrisan.
 
 
-![diagram zaporedja Registracija osnovni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Brisanje-oglasa-osnovni-tok.png)
+![diagram zaporedja Registracija osnovni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Brisanje-oglasa-osnovni-tok.png)
 
 ### 3.8 Urejanje profila
 Diagrami zaporedja funkcionalnosti "Urejanje profila". Osnovna tokova se razlikujeta v vlogi uporabnika, ki želi urejati profil. Na diagramih so prikazani še izjemni tokovi in extendi te funkcionalnosti.
 #### 3.8.1 Urejanje profila - osnovni tok 1
 
-![diagram zaporedja Urejanje profila osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/urejanjeProfilaOsnovni1.png)
+![diagram zaporedja Urejanje profila osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/urejanjeProfilaOsnovni1.png)
 
 #### 3.8.2 Urejanje profila - osnovni tok 2
 
-![diagram zaporedja Urejanje profila osnovni tok 2](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/urejanjeProfilaOsnovni2(S).png>)
-![diagram zaporedja Urejanje profila osnovni tok 2](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/urejanjeProfilaOsnovni2(P).png>)
+![diagram zaporedja Urejanje profila osnovni tok 2](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/urejanjeProfilaOsnovni2(S).png>)
+![diagram zaporedja Urejanje profila osnovni tok 2](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/urejanjeProfilaOsnovni2(P).png>)
 
 ### 3.9 Brisanje profila
 
@@ -1904,9 +1904,9 @@ Diagrami zaporedja funkcionalnosti "Urejanje profila". Osnovna tokova se razliku
 Diagrami zaporedja funkcionalnosti "Brisanje profila", ki se razlikujejo v uporabniški vlogi akterja (Lastnik psa, Sprehajalec ali Podjetje).
 
 
-![diagram zaporedja Brisanje profila osnovni tok 1](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni1(L).png>)
-![diagram zaporedja Brisanje profila osnovni tok 1](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni1(P).png>)
-![diagram zaporedja Brisanje profila osnovni tok 1](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni1(S).png>)
+![diagram zaporedja Brisanje profila osnovni tok 1](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni1(L).png>)
+![diagram zaporedja Brisanje profila osnovni tok 1](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni1(P).png>)
+![diagram zaporedja Brisanje profila osnovni tok 1](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni1(S).png>)
 
 #### 3.9.1 Brisanje profila - osnovni tok 2
 
@@ -1914,148 +1914,148 @@ Diagrami zaporedja funkcionalnosti "Brisanje profila", ki se razlikujejo v upora
 Diagram zaporedja funkcionalnist "Brisanje profila" v osnovnem toku 2, kjer je akter Administrator. Označen je tudi izjemni tok te funkcionalnosti.
 
 
-![diagram zaporedja Brisanje profila osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni2.png)
+![diagram zaporedja Brisanje profila osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/brisanjeProfilaOsnovni2.png)
 
 ### 3.10 Pregled seznama oglasov in Pregled izbranega oglasa
 Diagram zaporedja funkcionalnist "Pregled seznama oglasov" in "Pregled izbranega oglasa", ki je included v tej funkcionalnosti. Na diagramu je označen alternativni tok glede na filtriranje, ki ga ima Lastnik psa izbranega. Poleg tega je označen še izjemni tok, ki se proži ko ni novih oglasov, in vsi extendi te funkcionalnosti.
 #### 3.10.1 Pregled seznama oglasov - osnovni tok
 
-![diagram zaporedja Pregled seznama oglasov](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/pregSeznamaOglasov.png)
+![diagram zaporedja Pregled seznama oglasov](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/pregSeznamaOglasov.png)
 
 ### 3.12 Zavrni ponudbo
 Diagram zaporedja funkcionlnosti "Zavrni ponudbo", ki samo na zaslonski maski vrne naslednji oglas iz seznama.
 #### 3.12.1 Zavrni ponudbo - osnovni tok
 
-![diagram zaporedja Zavrni ponudbo](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/zavrniPonudboOsnovni.png)
+![diagram zaporedja Zavrni ponudbo](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/zavrniPonudboOsnovni.png)
 
 ### 3.13 Sprejmi ponudbo
 
 #### 3.13.1 Sprejmi ponudbo - osnovni tok 1
 Diagram zaporedja funkcionalnosti "Sprejmi ponudbo", ko je lastnik psa sprejel ponudbo Sprehajalca. Označena sta tudi izjemna tokova.
-![diagram zaporedja Sprejmi ponudbo - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/sprejmiPonudboOsnovni1.png)
+![diagram zaporedja Sprejmi ponudbo - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/sprejmiPonudboOsnovni1.png)
 
 #### 3.13.2 Sprejmi ponudbo - osnovni tok 2
 Diagram zaporedja funkcionalnosti "Sprejmi ponudbo", ko je lastnik psa sprejel ponudbo Podjetja. Označena sta tudi izjemna tokova.
-![diagram zaporedja Sprejmi ponudbo - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/sprejmiPonudboOsnovni2.png)
+![diagram zaporedja Sprejmi ponudbo - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/sprejmiPonudboOsnovni2.png)
 
 ### 3.15 Prijava neprimerne vsebine
 Diagrami zaporedja funkcionalnosti "Prijava neprimerne vsebine". Osnovna tokova se razlikujeta v akterju, ki jih uporablja, alternativni tok pa ima drugačno pot funkcionalnosti.
 #### 3.15.1 Prijava neprimerne vsebine - osnovni tok 1
 
-![diagram zaporedja Prijava neprimerne vsebine - osnovni tok 1 in alternativni tok](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/prijavaNeprimerneVsebineOsnovni1.png)
+![diagram zaporedja Prijava neprimerne vsebine - osnovni tok 1 in alternativni tok](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/prijavaNeprimerneVsebineOsnovni1.png)
 
 #### 3.15.2 Prijava neprimerne vsebine - osnovni tok 2
 
-![diagram zaporedja Prijava neprimerne vsebine - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/prijavaNeprimerneVsebineOsnovni2.png)
+![diagram zaporedja Prijava neprimerne vsebine - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/prijavaNeprimerneVsebineOsnovni2.png)
 
 #### 3.15.3 Prijava neprimerne vsebine - alternativni tok
 
-![diagram zaporedja Prijava neprimerne vsebine - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/prijavaNeprimerneVsebineAlt.png)
+![diagram zaporedja Prijava neprimerne vsebine - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/prijavaNeprimerneVsebineAlt.png)
 
 ### 3.16 Pregled profila sogovornika
 
 #### 3.16.1 Pregled profila sogovornika - osnovni tok
 Diagram zaporedja funkcionalnosti "Pregled profila sogovornika" ko je akter Lastnik psa z označenimi alternativnimi in izjemnimi tokovi.
-![diagram zaporedja Pregled profila sogovornika](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Pregled%20profila%20sogovornika(L)%20-%20osnovni%20tok.png>)
+![diagram zaporedja Pregled profila sogovornika](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Pregled%20profila%20sogovornika(L)%20-%20osnovni%20tok.png>)
 Diagram zaporedja funkcionalnosti "Pregled profila sogovornika" ko je akter Sprehajalec.
-![diagram zaporedja Pregled profila sogovornika S](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Pregled%20profila%20sogovornika(S)%20-%20osnovni%20tok.png>)
+![diagram zaporedja Pregled profila sogovornika S](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Pregled%20profila%20sogovornika(S)%20-%20osnovni%20tok.png>)
 
 ### 3.17 Filtriranje seznama oglasov po oceni
 
 #### 3.17.1 Filtriranje seznama oglasov po oceni - osnovni tok
 
-![diagram zaporedja Filtriranje seznama oglasov po oceni](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Filtriranje%20seznama%20oglasov%20po%20oceni.png)
+![diagram zaporedja Filtriranje seznama oglasov po oceni](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Filtriranje%20seznama%20oglasov%20po%20oceni.png)
 
 ### 3.18 Filtriranje seznama oglasov po oddaljenosti
 
 #### 3.18.1 Filtriranje seznama oglasov po oddaljenosti - osnovni tok
 
-![diagram zaporedja Filtriranje seznama oglasov po oddaljenosti](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Filtriranje%20seznama%20oglasov%20po%20razdaljii.png)
+![diagram zaporedja Filtriranje seznama oglasov po oddaljenosti](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Filtriranje%20seznama%20oglasov%20po%20razdaljii.png)
 
 ### 3.19 Prikaz seznama pogovorov
 
 #### 3.19.1 Prikaz seznama pogovorov - osnovni tok
 Diagram zaporedja funkcionalnosti "Prikaz seznama pogovorov", ki se razlikujeta v akterjih, ki jih uporabljata.
-![diagram zaporedja Prikaz seznama pogovorov L](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prikaz%20seznama%20pogovorov(L)%20-%20osnovni%20tok.png>)
-![diagram zaporedja Prikaz seznama pogovorov S](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Prikaz%20seznama%20pogovorov(S)%20-%20osnovni%20tok.png>)
+![diagram zaporedja Prikaz seznama pogovorov L](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prikaz%20seznama%20pogovorov(L)%20-%20osnovni%20tok.png>)
+![diagram zaporedja Prikaz seznama pogovorov S](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Prikaz%20seznama%20pogovorov(S)%20-%20osnovni%20tok.png>)
 
 ### 3.20 Pogovor med lastnikom psa in sprehajalcem
 
 #### 3.20.1 Pogovor med lastnikom psa in sprehajalcem - osnovni tok
 Diagram zaporedja funkcionalnosti "Pogovor med lastnikom psa in sprehajalcem", ki se razlikujeta v akterjih, ki jih uporabljata.
-![diagram zaporedja Pogovor med lastnikom psa in sprehajalcem L](<https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Pogovor%20med%20lastnikom%20psa%20in%20sprehajalcem(L)%20-%20osnovni%20tok.png>)
-![diagram zaporedja Pogovor med lastnikom psa in sprehajalcem S](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/Pogovor%20med%20lastnikom%20psa%20in%20sprehajalcem%20-%20osnovni%20tok.png)
+![diagram zaporedja Pogovor med lastnikom psa in sprehajalcem L](<https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Pogovor%20med%20lastnikom%20psa%20in%20sprehajalcem(L)%20-%20osnovni%20tok.png>)
+![diagram zaporedja Pogovor med lastnikom psa in sprehajalcem S](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/Pogovor%20med%20lastnikom%20psa%20in%20sprehajalcem%20-%20osnovni%20tok.png)
 
 ### 3.21 Podajanje ocene
 
 #### 3.21.1 Podajanje ocene - osnovni tok 1, alternativni tok 1
 Diagram zaporedja funkcionalnosti "Podajanje ocene", ko je uporabnik Lastnik psa z označenim osnovnim in alternativnim tokom.
-![diagram zaporedja Podajanje ocene - osnovni tok 1, alternativni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/PodajanjeOceneOsAltTok1.png)
+![diagram zaporedja Podajanje ocene - osnovni tok 1, alternativni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/PodajanjeOceneOsAltTok1.png)
 
 #### 3.21.2 Podajanje ocene - osnovni tok 2, alternativni tok 2
 Diagram zaporedja funkcionalnosti "Podajanje ocene", ko je uporabnik Sprehajalec z označenim osnovnim in alternativnim tokom.
-![diagram zaporedja Podajanje ocene - osnovni tok 2, alternativni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/PodajanjeOceneOsAltTok2.png)
+![diagram zaporedja Podajanje ocene - osnovni tok 2, alternativni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/PodajanjeOceneOsAltTok2.png)
 
 ### 3.22 Ustvarjanje novega oglasa
 
 #### 3.22.1 Ustvarjanje novega oglasa - osnovni tok 1
 Diagram zaporedja funkcionalnosti "Ustvarjanje novega oglasa", ko je uporabnik Sprehajalec z označenimi izjemnimi tokovi.
-![diagram zaporedja Ustvarjanje novega oglasa - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/UstvarjanjeNovegaOglasaOsTok1.png)
+![diagram zaporedja Ustvarjanje novega oglasa - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/UstvarjanjeNovegaOglasaOsTok1.png)
 
 #### 3.22.2 Ustvarjanje novega oglasa - osnovni tok 2
 Diagram zaporedja funkcionalnosti "Ustvarjanje novega oglasa", ko je uporabnik Podjetje z označenimi izjemnimi tokovi.
-![diagram zaporedja Ustvarjanje novega oglasa - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/UstvarjanjeNovegaOglasaOsTok2.png)
+![diagram zaporedja Ustvarjanje novega oglasa - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/UstvarjanjeNovegaOglasaOsTok2.png)
 
 ### 3.23 Pregled svojih aktivnih oglasov
 
 #### 3.23.1 Pregled svojih aktivnih oglasov - osnovni tok 1
 
-![diagram zaporedja Pregled svojih aktivnih oglasov - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/PregledSvojihAktivnihOglasovOsTok1.png)
+![diagram zaporedja Pregled svojih aktivnih oglasov - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/PregledSvojihAktivnihOglasovOsTok1.png)
 
 #### 3.23.2 Pregled svojih aktivnih oglasov - osnovni tok 2
 
-![diagram zaporedja Pregled svojih aktivnih oglasov - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/PregledSvojihAktivnihOglasovOsTok2.png)
+![diagram zaporedja Pregled svojih aktivnih oglasov - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/PregledSvojihAktivnihOglasovOsTok2.png)
 
 ### 3.24 Urejanje aktivnega oglasa
 
 #### 3.24.1 Urejanje aktivnega oglasa - osnovni tok 1
 Diagram zaporedja funkcionalnosti "Urejanje aktivnega oglasa", ko je uporabnik Sprehajalec z označenimi izjemnimi tokovi.
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/UrejanjeAktivnegaOglasaOsTok1.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/UrejanjeAktivnegaOglasaOsTok1.png)
 
 #### 3.24.2 Urejanje aktivnega oglasa - osnovni tok 2
 Diagram zaporedja funkcionalnosti "Urejanje aktivnega oglasa", ko je uporabnik Podjetje z označenimi izjemnimi tokovi.
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/UrejanjeAktivnegaOglasaOsTok2.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/UrejanjeAktivnegaOglasaOsTok2.png)
 
 ### 3.25 Brisanje aktivnega oglasa
 
 #### 3.25.1 Brisanje aktivnega oglasa - osnovni tok 1
 
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_OsnovniTok1.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_OsnovniTok1.png)
 
 #### 3.25.2 Brisanje aktivnega oglasa - osnovni tok 2
 
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_OsnovniTok2.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_OsnovniTok2.png)
 
 #### 3.25.3 Brisanje aktivnega oglasa - alternativni tok 1
 
-![diagram zaporedja Urejanje aktivnega oglasa - alternativni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_AlternativniTok1.png)
+![diagram zaporedja Urejanje aktivnega oglasa - alternativni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_AlternativniTok1.png)
 
 #### 3.25.4 Brisanje aktivnega oglasa - alternativni tok 2
 
-![diagram zaporedja Urejanje aktivnega oglasa - alternativni tok 2](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_AlternativniTok2.png)
+![diagram zaporedja Urejanje aktivnega oglasa - alternativni tok 2](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/BrisanjeAktivnegaOglasa_AlternativniTok2.png)
 
 ### 3.26 Generiranje varnostne šifre
 
 #### 3.26.1 Generiranje varnostne šifre - osnovni tok 1
 
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/GeneriranjeVarnostneSifre_OsnovniTok1.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/GeneriranjeVarnostneSifre_OsnovniTok1.png)
 
 #### 3.26.2 Generiranje varnostne šifre - osnovni tok 2
 
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/GeneriranjeVarnostneSifre_OsnovniTok2.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/GeneriranjeVarnostneSifre_OsnovniTok2.png)
 
 ### 3.27 Izdelava statistike o uporabnikih
 Diagram zaporedja funkcionalosti "Izdelava statistike o uporabnikih" s prikazanima dvema vrstama klicev, ki smo jih definirali v opisu Vmesnikov v dokumentu Zajem zahtev.
 #### 3.27.1 Izdelava statistike o uporabnikih - osnovni tok
 
-![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/tpo-2020-2021/LP234-25/blob/master/docs/img/diagramiZaporedja/IzdelavaStatistikeOUporabnikih.png)
+![diagram zaporedja Urejanje aktivnega oglasa - osnovni tok 1](https://github.com/JodasSenpai/TPO-arhitektura/blob/main/docs/img/diagramiZaporedja/IzdelavaStatistikeOUporabnikih.png)
